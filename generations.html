@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Покоління ГБО: порівняння 2, 3, 4, 5 — яке вибрати | gbo.pp.ua</title>
+  <meta name="description" content="Повний огляд всіх поколінь ГБО: відмінності, переваги, для яких авто підходить. Допомагаємо обрати правильну систему.">
+  <link rel="canonical" href="https://gbo.pp.ua/generations.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0f0f0f; --bg2:#1a1a1a; --bg3:#242424; --accent:#FF6B00; --text:#e8e8e8; --text-muted:#888; --border:#2e2e2e; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg); color:var(--text); font-family:'PT Serif',serif; line-height:1.8; }
+    nav { position:sticky; top:0; z-index:100; background:rgba(15,15,15,0.96); backdrop-filter:blur(10px); border-bottom:1px solid var(--border); padding:0 2rem; display:flex; align-items:center; justify-content:space-between; height:64px; }
+    .logo { font-family:'Oswald',sans-serif; font-size:1.6rem; font-weight:700; color:var(--accent); text-decoration:none; }
+    .logo span { color:var(--text); }
+    nav ul { list-style:none; display:flex; gap:2rem; }
+    nav a { color:var(--text-muted); text-decoration:none; font-family:'Oswald',sans-serif; font-size:0.95rem; transition:color 0.2s; }
+    nav a:hover { color:var(--accent); }
+
+    .page-hero { background:var(--bg2); border-bottom:1px solid var(--border); padding:4rem 2rem; }
+    .page-hero .container { max-width:1200px; margin:0 auto; }
+    .page-tag { font-family:'Oswald',sans-serif; font-size:0.7rem; letter-spacing:0.15em; color:var(--accent); text-transform:uppercase; margin-bottom:1rem; display:block; }
+    h1 { font-family:'Oswald',sans-serif; font-size:clamp(2rem,5vw,3.5rem); font-weight:700; line-height:1.1; }
+    .page-sub { color:var(--text-muted); margin-top:1rem; max-width:600px; }
+
+    .container { max-width:1200px; margin:0 auto; padding:0 2rem; }
+    section { padding:4rem 0; }
+
+    /* GENERATION CARDS */
+    .gen-section { border-bottom:1px solid var(--border); padding:4rem 0; }
+    .gen-header { display:flex; align-items:flex-start; gap:2rem; margin-bottom:2rem; }
+    .gen-number { font-family:'Oswald',sans-serif; font-size:6rem; font-weight:700; color:var(--border); line-height:1; min-width:120px; }
+    .gen-header-text { flex:1; }
+    .gen-title { font-family:'Oswald',sans-serif; font-size:2rem; font-weight:700; }
+    .gen-subtitle { color:var(--text-muted); margin-top:0.3rem; }
+    .gen-badge-row { display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:0.75rem; }
+    .badge { font-family:'Oswald',sans-serif; font-size:0.7rem; letter-spacing:0.1em; padding:0.25rem 0.6rem; }
+    .badge-green { background:rgba(76,175,80,0.15); color:#4caf50; }
+    .badge-orange { background:rgba(255,107,0,0.2); color:var(--accent); }
+    .badge-gray { background:var(--bg3); color:var(--text-muted); }
+    .badge-blue { background:rgba(33,150,243,0.15); color:#64b5f6; }
+
+    .gen-body { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+    .gen-body p { font-size:1rem; color:var(--text-muted); margin-bottom:1rem; }
+    .gen-body p strong { color:var(--text); }
+
+    .spec-list { background:var(--bg2); border:1px solid var(--border); padding:1.5rem; }
+    .spec-list h4 { font-family:'Oswald',sans-serif; font-size:0.85rem; letter-spacing:0.1em; color:var(--text-muted); text-transform:uppercase; margin-bottom:1rem; }
+    .spec-row { display:flex; justify-content:space-between; align-items:center; padding:0.6rem 0; border-bottom:1px solid var(--border); font-size:0.9rem; }
+    .spec-row:last-child { border:none; }
+    .spec-label { color:var(--text-muted); }
+    .spec-val { font-family:'Oswald',sans-serif; font-weight:600; color:var(--text); }
+    .spec-val.accent { color:var(--accent); }
+
+    /* COMPARISON TABLE */
+    .compare-table { width:100%; border-collapse:collapse; margin-top:2rem; }
+    .compare-table th { background:var(--bg2); font-family:'Oswald',sans-serif; padding:1rem; text-align:left; border-bottom:2px solid var(--accent); font-size:0.9rem; letter-spacing:0.05em; }
+    .compare-table td { padding:0.85rem 1rem; border-bottom:1px solid var(--border); font-size:0.9rem; }
+    .compare-table tr:hover td { background:var(--bg2); }
+    .check { color:#4caf50; font-size:1.1rem; }
+    .cross { color:#f44336; font-size:1.1rem; }
+    .highlight-row td { background:rgba(255,107,0,0.06); }
+
+    footer { background:var(--bg2); border-top:1px solid var(--border); padding:2rem; text-align:center; color:var(--text-muted); font-size:0.85rem; }
+    footer a { color:var(--accent); text-decoration:none; }
+    @media(max-width:768px) { nav ul{display:none;} .gen-body{grid-template-columns:1fr;} .gen-header{flex-direction:column;gap:0.5rem;} .gen-number{font-size:4rem;} }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="/" class="logo">GBO<span>.pp.ua</span></a>
+  <ul>
+    <li><a href="/articles.html">Статті</a></li>
+    <li><a href="/generations.html" style="color:var(--accent)">Покоління ГБО</a></li>
+    <li><a href="/services.html">Сервіси</a></li>
+    <li><a href="/contacts.html">Контакт</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="page-tag">ПОРІВНЯННЯ</span>
+    <h1>Покоління ГБО:<br>1, 2, 3, 4 та 5</h1>
+    <p class="page-sub">Чим відрізняються, для яких двигунів підходять і яке обрати саме тобі — розбираємо детально.</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- GEN 2 -->
+  <div class="gen-section" id="gen2">
+    <div class="gen-header">
+      <div class="gen-number">02</div>
+      <div class="gen-header-text">
+        <div class="gen-title">Друге покоління ГБО</div>
+        <div class="gen-subtitle">Для карбюраторних двигунів та старих моно-інжекторів</div>
+        <div class="gen-badge-row">
+          <span class="badge badge-gray">ЗАСТАРІЛЕ</span>
+          <span class="badge badge-gray">КАРБЮРАТОР</span>
+        </div>
+      </div>
+    </div>
+    <div class="gen-body">
+      <div>
+        <p>Друге покоління ГБО — це системи для <strong>карбюраторних двигунів</strong> та найперших моноінжекторів. Газ подавався через змішувач, встановлений між повітряним фільтром і карбюратором.</p>
+        <p>Сьогодні такі системи майже не встановлюються — парк карбюраторних авто в Україні мінімальний. Якщо у вас ВАЗ або стара іномарка до 1993 р.в. — це ваш варіант.</p>
+        <p><strong>Ціна:</strong> 4 000–8 000 грн. Знайти майстрів стає дедалі важче.</p>
+      </div>
+      <div class="spec-list">
+        <h4>Характеристики</h4>
+        <div class="spec-row"><span class="spec-label">Тип двигуна</span><span class="spec-val">Карбюратор</span></div>
+        <div class="spec-row"><span class="spec-label">Вартість установки</span><span class="spec-val">4–8 тис. грн</span></div>
+        <div class="spec-row"><span class="spec-label">Ефективність</span><span class="spec-val">★★☆☆☆</span></div>
+        <div class="spec-row"><span class="spec-label">Доступність майстрів</span><span class="spec-val">Рідко</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEN 3 -->
+  <div class="gen-section" id="gen3">
+    <div class="gen-header">
+      <div class="gen-number">03</div>
+      <div class="gen-header-text">
+        <div class="gen-title">Третє покоління ГБО</div>
+        <div class="gen-subtitle">Для моно-інжекторних двигунів (1 форсунка)</div>
+        <div class="gen-badge-row">
+          <span class="badge badge-gray">РІДКО</span>
+          <span class="badge badge-gray">МОНО-ІНЖЕКТОР</span>
+        </div>
+      </div>
+    </div>
+    <div class="gen-body">
+      <div>
+        <p>3-тє покоління розроблялось для авто 90-х з <strong>одноточковим впорском</strong> (центральний інжектор). Подача газу відбувалась у впускний колектор через одну точку — звідси назва.</p>
+        <p>Такі двигуни зустрічаються на VW Passat B3/B4, Audi 80, деяких Opel та BMW E30. Якщо у вас таке авто — це ваш єдиний варіант.</p>
+        <p><strong>Ціна:</strong> 7 000–12 000 грн.</p>
+      </div>
+      <div class="spec-list">
+        <h4>Характеристики</h4>
+        <div class="spec-row"><span class="spec-label">Тип двигуна</span><span class="spec-val">Моно-інжектор</span></div>
+        <div class="spec-row"><span class="spec-label">Вартість установки</span><span class="spec-val">7–12 тис. грн</span></div>
+        <div class="spec-row"><span class="spec-label">Ефективність</span><span class="spec-val">★★★☆☆</span></div>
+        <div class="spec-row"><span class="spec-label">Доступність майстрів</span><span class="spec-val">Обмежено</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEN 4 -->
+  <div class="gen-section" id="gen4" style="border-color:var(--accent);">
+    <div class="gen-header">
+      <div class="gen-number" style="color:var(--accent)">04</div>
+      <div class="gen-header-text">
+        <div class="gen-title">Четверте покоління ГБО</div>
+        <div class="gen-subtitle">Найпоширеніший варіант для сучасних бензинових авто</div>
+        <div class="gen-badge-row">
+          <span class="badge badge-orange">⭐ НАЙКРАЩИЙ ВИБІР</span>
+          <span class="badge badge-green">МУЛЬТИТОЧКОВИЙ ВПОРСК</span>
+        </div>
+      </div>
+    </div>
+    <div class="gen-body">
+      <div>
+        <p>4-те покоління — <strong>золотий стандарт ГБО</strong>. Кожен циліндр отримує газ через власну форсунку — так само, як бензин. Це забезпечує рівномірне згоряння та хорошу економію.</p>
+        <p>Підходить для більшості бензинових авто 2000–2020 р.в. з розподіленим впорском (MPI, MPFI). Сумісне з більшістю Euro 4/5 двигунів.</p>
+        <p><strong>Популярні марки:</strong> BRC, LOVATO, STAG, Digitronic, Landi Renzo.</p>
+        <p><strong>Ціна:</strong> 18 000–35 000 грн «під ключ» залежно від марки та об'єму балону.</p>
+      </div>
+      <div class="spec-list">
+        <h4>Характеристики</h4>
+        <div class="spec-row"><span class="spec-label">Тип двигуна</span><span class="spec-val accent">MPI / MPFI</span></div>
+        <div class="spec-row"><span class="spec-label">Вартість установки</span><span class="spec-val">18–35 тис. грн</span></div>
+        <div class="spec-row"><span class="spec-label">Ефективність</span><span class="spec-val accent">★★★★★</span></div>
+        <div class="spec-row"><span class="spec-label">Доступність майстрів</span><span class="spec-val accent">Скрізь</span></div>
+        <div class="spec-row"><span class="spec-label">Термін окупності</span><span class="spec-val">12–18 міс.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEN 5 -->
+  <div class="gen-section" id="gen5">
+    <div class="gen-header">
+      <div class="gen-number">05</div>
+      <div class="gen-header-text">
+        <div class="gen-title">П'яте покоління ГБО</div>
+        <div class="gen-subtitle">Для двигунів з прямим впорском (GDI, TSI, TFSI)</div>
+        <div class="gen-badge-row">
+          <span class="badge badge-blue">ПРЕМІУМ</span>
+          <span class="badge badge-blue">ПРЯМИЙ ВПОРСК</span>
+          <span class="badge badge-blue">ТУРБО</span>
+        </div>
+      </div>
+    </div>
+    <div class="gen-body">
+      <div>
+        <p>5-те покоління — для авто, де встановити 4-те неможливо: <strong>двигуни з прямим впорском бензину</strong> (GDI, TSI, TFSI, HPI, Skyactiv). У них форсунки знаходяться безпосередньо у камері згоряння — газ теж потрібно подавати туди.</p>
+        <p>Це складніша і дорожча система. Потрібен досвідчений майстер і якісне обладнання. Марки: PRINS VSI DI, ZAVOLI, BRC.</p>
+        <p><strong>Ціна:</strong> від 35 000 грн. Знайти майстра складніше.</p>
+      </div>
+      <div class="spec-list">
+        <h4>Характеристики</h4>
+        <div class="spec-row"><span class="spec-label">Тип двигуна</span><span class="spec-val accent">GDI / TSI / TFSI</span></div>
+        <div class="spec-row"><span class="spec-label">Вартість установки</span><span class="spec-val">35–60 тис. грн</span></div>
+        <div class="spec-row"><span class="spec-label">Ефективність</span><span class="spec-val">★★★★☆</span></div>
+        <div class="spec-row"><span class="spec-label">Доступність майстрів</span><span class="spec-val">Обмежено</span></div>
+        <div class="spec-row"><span class="spec-label">Термін окупності</span><span class="spec-val">20–30 міс.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPARISON TABLE -->
+  <section>
+    <div style="font-family:'Oswald',sans-serif; font-size:0.75rem; letter-spacing:0.2em; color:var(--accent); margin-bottom:1rem;">ПІДСУМОК</div>
+    <h2 style="font-family:'Oswald',sans-serif; font-size:2rem; margin-bottom:0.5rem;">Порівняння всіх поколінь</h2>
+    <table class="compare-table">
+      <thead>
+        <tr><th>Параметр</th><th>2-ге</th><th>3-тє</th><th>4-те ⭐</th><th>5-те</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Тип двигуна</td><td>Карбюратор</td><td>Моно-інжектор</td><td>MPI/MPFI</td><td>GDI/TSI</td></tr>
+        <tr><td>Ціна установки</td><td>4–8 тис.</td><td>7–12 тис.</td><td>18–35 тис.</td><td>35–60 тис.</td></tr>
+        <tr class="highlight-row"><td>Ефективність</td><td>★★☆☆☆</td><td>★★★☆☆</td><td>★★★★★</td><td>★★★★☆</td></tr>
+        <tr><td>Сумісність з каталізатором</td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        <tr><td>Доступність майстрів</td><td>Мало</td><td>Обмежено</td><td>Скрізь</td><td>Складно</td></tr>
+        <tr><td>Рекомендуємо?</td><td>Лише для старих авто</td><td>Лише для моно</td><td><strong style="color:var(--accent)">Так — топ вибір</strong></td><td>Для GDI/TSI</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
+
+<footer>
+  <a href="/">GBO.pp.ua</a> — Незалежний портал про газобалонне обладнання
+</footer>
+</body>
+</html>

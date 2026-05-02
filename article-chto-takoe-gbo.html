@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Що таке ГБО і чи варто ставити у 2025 році | gbo.pp.ua</title>
+  <meta name="description" content="Детальний розбір газобалонного обладнання: принцип роботи, економія, ризики, підводні камені. Стаття для тих, хто думає чи ставити ГБО.">
+  <link rel="canonical" href="https://gbo.pp.ua/article-chto-takoe-gbo.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0f0f0f; --bg2:#1a1a1a; --bg3:#242424; --accent:#FF6B00; --text:#e8e8e8; --text-muted:#888; --border:#2e2e2e; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg); color:var(--text); font-family:'PT Serif',serif; line-height:1.8; }
+    nav { position:sticky; top:0; z-index:100; background:rgba(15,15,15,0.96); backdrop-filter:blur(10px); border-bottom:1px solid var(--border); padding:0 2rem; display:flex; align-items:center; justify-content:space-between; height:64px; }
+    .logo { font-family:'Oswald',sans-serif; font-size:1.6rem; font-weight:700; color:var(--accent); text-decoration:none; }
+    .logo span { color:var(--text); }
+    nav ul { list-style:none; display:flex; gap:2rem; }
+    nav a { color:var(--text-muted); text-decoration:none; font-family:'Oswald',sans-serif; font-size:0.95rem; transition:color 0.2s; }
+    nav a:hover { color:var(--accent); }
+
+    .article-hero { background:var(--bg2); border-bottom:1px solid var(--border); padding:4rem 2rem 3rem; }
+    .breadcrumb { font-family:'Oswald',sans-serif; font-size:0.8rem; color:var(--text-muted); margin-bottom:1.5rem; }
+    .breadcrumb a { color:var(--text-muted); text-decoration:none; }
+    .breadcrumb a:hover { color:var(--accent); }
+    .article-tag { font-family:'Oswald',sans-serif; font-size:0.7rem; letter-spacing:0.15em; color:var(--accent); text-transform:uppercase; margin-bottom:1rem; display:block; }
+    h1 { font-family:'Oswald',sans-serif; font-size:clamp(2rem,5vw,3.5rem); font-weight:700; line-height:1.1; max-width:800px; }
+    .article-meta-row { display:flex; gap:2rem; margin-top:1.5rem; font-family:'Oswald',sans-serif; font-size:0.85rem; color:var(--text-muted); flex-wrap:wrap; }
+
+    .article-layout { max-width:1200px; margin:0 auto; padding:3rem 2rem; display:grid; grid-template-columns:1fr 320px; gap:4rem; }
+    .article-body h2 { font-family:'Oswald',sans-serif; font-size:1.8rem; font-weight:700; margin:2.5rem 0 1rem; color:var(--text); }
+    .article-body h3 { font-family:'Oswald',sans-serif; font-size:1.3rem; font-weight:600; margin:2rem 0 0.75rem; color:var(--text); }
+    .article-body p { margin-bottom:1.2rem; font-size:1.05rem; }
+    .article-body ul, .article-body ol { padding-left:1.5rem; margin-bottom:1.2rem; }
+    .article-body li { margin-bottom:0.5rem; }
+    .article-body a { color:var(--accent); }
+
+    .highlight-box { background:var(--bg2); border-left:3px solid var(--accent); padding:1.5rem; margin:2rem 0; }
+    .highlight-box strong { font-family:'Oswald',sans-serif; display:block; margin-bottom:0.5rem; color:var(--accent); }
+
+    .pros-cons { display:grid; grid-template-columns:1fr 1fr; gap:1px; margin:2rem 0; background:var(--border); }
+    .pros, .cons { background:var(--bg2); padding:1.5rem; }
+    .pros h4 { color:#4caf50; font-family:'Oswald',sans-serif; margin-bottom:1rem; }
+    .cons h4 { color:#f44336; font-family:'Oswald',sans-serif; margin-bottom:1rem; }
+    .pros li::marker { color:#4caf50; }
+    .cons li::marker { color:#f44336; }
+
+    .cost-table { width:100%; border-collapse:collapse; margin:2rem 0; }
+    .cost-table th { background:var(--accent); color:#000; font-family:'Oswald',sans-serif; padding:0.75rem 1rem; text-align:left; font-size:0.9rem; }
+    .cost-table td { padding:0.75rem 1rem; border-bottom:1px solid var(--border); font-size:0.95rem; }
+    .cost-table tr:hover td { background:var(--bg2); }
+
+    /* SIDEBAR */
+    .sidebar { position:sticky; top:80px; align-self:start; }
+    .sidebar-toc { background:var(--bg2); border:1px solid var(--border); padding:1.5rem; margin-bottom:1.5rem; }
+    .sidebar-toc h4 { font-family:'Oswald',sans-serif; font-size:0.85rem; letter-spacing:0.1em; color:var(--text-muted); text-transform:uppercase; margin-bottom:1rem; }
+    .sidebar-toc ol { padding-left:1.2rem; }
+    .sidebar-toc li { margin-bottom:0.5rem; }
+    .sidebar-toc a { color:var(--text-muted); text-decoration:none; font-size:0.9rem; transition:color 0.2s; }
+    .sidebar-toc a:hover { color:var(--accent); }
+
+    .sidebar-cta { background:var(--accent); padding:1.5rem; }
+    .sidebar-cta h4 { font-family:'Oswald',sans-serif; font-size:1.1rem; font-weight:700; color:#000; margin-bottom:0.5rem; }
+    .sidebar-cta p { font-size:0.85rem; color:rgba(0,0,0,0.7); margin-bottom:1rem; }
+    .sidebar-cta a { display:block; background:#000; color:var(--accent); font-family:'Oswald',sans-serif; font-weight:600; text-decoration:none; text-align:center; padding:0.75rem; font-size:0.9rem; transition:background 0.2s; }
+    .sidebar-cta a:hover { background:#111; }
+
+    footer { background:var(--bg2); border-top:1px solid var(--border); padding:2rem; text-align:center; color:var(--text-muted); font-size:0.85rem; }
+    footer a { color:var(--accent); text-decoration:none; }
+
+    @media(max-width:768px) {
+      .article-layout { grid-template-columns:1fr; }
+      .sidebar { position:static; }
+      nav ul { display:none; }
+      .pros-cons { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="/" class="logo">GBO<span>.pp.ua</span></a>
+  <ul>
+    <li><a href="/articles.html">Статті</a></li>
+    <li><a href="/generations.html">Покоління ГБО</a></li>
+    <li><a href="/services.html">Сервіси</a></li>
+    <li><a href="/contacts.html">Контакт</a></li>
+  </ul>
+</nav>
+
+<div class="article-hero">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="breadcrumb"><a href="/">Головна</a> → <a href="/articles.html">Статті</a> → Що таке ГБО</div>
+    <span class="article-tag">ОСНОВИ · ВИБІР</span>
+    <h1>Що таке ГБО і чи варто ставити у 2025 році?</h1>
+    <div class="article-meta-row">
+      <span>📅 Травень 2025</span>
+      <span>⏱ 8 хвилин читати</span>
+      <span>✍️ Редакція gbo.pp.ua</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <p>ГБО — газобалонне обладнання — це система, яка дозволяє звичайному бензиновому двигуну працювати на скрапленому газі (LPG: суміш пропану та бутану). Це не екзотика: у світі понад 27 мільйонів автомобілів їздять на газу, і Україна — одна з лідерів по кількості газифікованих авто у Європі.</p>
+
+    <div class="highlight-box">
+      <strong>💡 Головна причина, чому це популярно</strong>
+      Газ коштує приблизно вдвічі дешевше за бензин А-95. При витраті 10 л/100 км — щомісячна економія складає кілька тисяч гривень.
+    </div>
+
+    <h2 id="how">Як це працює?</h2>
+    <p>Принцип простий: замість бензину двигун спалює газ. У багажнику або під підлогою встановлюється балон з LPG-газом (пропан-бутан), а між балоном і двигуном монтується спеціальна система подачі газу — редуктор, форсунки, блок управління.</p>
+    <p>Сучасні системи 4-го та 5-го покоління повністю інтегруються з комп'ютером авто — перемикання між газом і бензином відбувається автоматично або кнопкою на панелі. Стартуєш завжди на бензині (2–3 хвилини), потім авто переходить на газ коли двигун прогрівається.</p>
+
+    <h2 id="economy">Скільки реально заощадиш?</h2>
+    <p>Порахуємо на прикладі. Умови: пробіг 2 000 км/місяць, бензиновий двигун 1.6–2.0, витрата 9–11 л/100 км.</p>
+
+    <table class="cost-table">
+      <tr><th>Параметр</th><th>На бензині</th><th>На газу</th></tr>
+      <tr><td>Витрата палива</td><td>10 л / 100 км</td><td>12 л / 100 км (газу)</td></tr>
+      <tr><td>Ціна палива</td><td>~65 грн/л</td><td>~30–33 грн/л</td></tr>
+      <tr><td>Витрати за місяць</td><td>~13 000 грн</td><td>~7 200 грн</td></tr>
+      <tr><td><strong>Економія на місяць</strong></td><td colspan="2"><strong>~5 800 грн</strong></td></tr>
+    </table>
+
+    <p>При середній вартості установки 22 000–28 000 грн — окупається за <strong>4–5 місяців</strong> активного використання, або за 12–18 місяців при середньому пробігу.</p>
+
+    <h2 id="proscons">Переваги та недоліки</h2>
+    <div class="pros-cons">
+      <div class="pros">
+        <h4>✅ Переваги</h4>
+        <ul>
+          <li>Економія 40–50% на паливі</li>
+          <li>Газ є майже скрізь в Україні</li>
+          <li>М'якше згоряння — менше нагару</li>
+          <li>Двигун при правильному ГБО живе довше</li>
+          <li>Можна їздити і на бензині</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <h4>❌ Недоліки</h4>
+        <ul>
+          <li>Початкова вартість 18–35 тис. грн</li>
+          <li>Зменшення місця у багажнику (балон)</li>
+          <li>Потрібне ТО кожні 10–15 тис. км</li>
+          <li>Не всі СТО вміють обслуговувати</li>
+          <li>Деякі мийки та паркінги не пускають</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 id="risk">Чи небезпечно?</h2>
+    <p>Це найпопулярніший страх — і він великою мірою необґрунтований. Сучасне ГБО обладнання проходить сертифікацію ЄЕК ООН R67. Балони мають клапани скидання тиску, мультиклапан і систему захисту від переповнення.</p>
+    <p>Статистика страхових компаній показує, що кількість пожеж від ГБО не вища, ніж від бензину. Головна умова безпеки — якісна установка у сертифікованому сервісі та регулярне обслуговування.</p>
+
+    <div class="highlight-box">
+      <strong>⚠️ Коли ГБО не варто ставити</strong>
+      Якщо авто їздить менше 1 000 км/місяць — окупність розтягнеться на 3–4 роки. Також не рекомендується на авто з пробігом понад 250 000 км без попереднього капремонту двигуна.
+    </div>
+
+    <h2 id="which">Яке ГБО обрати?</h2>
+    <p>Для більшості бензинових авто з розподіленим впорском (MPI) — <a href="/generations.html#gen4">4-те покоління ГБО</a> є оптимальним вибором. Це перевірена технологія, легко обслуговується, є запчастини.</p>
+    <p>Для авто з прямим впорском (GDI, TSI, TFSI, Skyactiv-G) — потрібне <a href="/generations.html#gen5">5-те покоління</a>. Або перевіреним рішенням є комбіноване ГБО 4+1 покоління.</p>
+
+    <h2 id="conclusion">Висновок</h2>
+    <p>У 2025 році ставити ГБО — виправдано для більшості автомобілістів, які проїжджають від 1 500 км на місяць. Технологія давно відпрацьована, обладнання надійне, заправки є по всій Україні. Головне — обрати якісне обладнання та перевіреного майстра.</p>
+    <p>Читайте також: <a href="/article-ustanovka.html">Установка ГБО — де краще і скільки коштує</a> та <a href="/generations.html">Порівняння всіх поколінь ГБО</a>.</p>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-toc">
+      <h4>Зміст статті</h4>
+      <ol>
+        <li><a href="#how">Як це працює</a></li>
+        <li><a href="#economy">Розрахунок економії</a></li>
+        <li><a href="#proscons">Переваги та недоліки</a></li>
+        <li><a href="#risk">Чи небезпечно?</a></li>
+        <li><a href="#which">Яке ГБО обрати</a></li>
+        <li><a href="#conclusion">Висновок</a></li>
+      </ol>
+    </div>
+    <div class="sidebar-cta">
+      <h4>Хочеш поставити ГБО?</h4>
+      <p>Знайди перевіреного майстра у твоєму місті.</p>
+      <a href="/services.html">Каталог сервісів →</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <a href="/">GBO.pp.ua</a> — Незалежний портал про газобалонне обладнання
+</footer>
+</body>
+</html>

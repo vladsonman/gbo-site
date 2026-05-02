@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог сервісів ГБО в Україні | gbo.pp.ua</title>
+  <meta name="description" content="Перевірені майстри та СТО з установки та обслуговування ГБО по всій Україні. Залиш заявку — підберемо майстра у твоєму місті.">
+  <link rel="canonical" href="https://gbo.pp.ua/services.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0f0f0f; --bg2:#1a1a1a; --bg3:#242424; --accent:#FF6B00; --text:#e8e8e8; --text-muted:#888; --border:#2e2e2e; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg); color:var(--text); font-family:'PT Serif',serif; line-height:1.8; }
+    nav { position:sticky; top:0; z-index:100; background:rgba(15,15,15,0.96); backdrop-filter:blur(10px); border-bottom:1px solid var(--border); padding:0 2rem; display:flex; align-items:center; justify-content:space-between; height:64px; }
+    .logo { font-family:'Oswald',sans-serif; font-size:1.6rem; font-weight:700; color:var(--accent); text-decoration:none; }
+    .logo span { color:var(--text); }
+    nav ul { list-style:none; display:flex; gap:2rem; }
+    nav a { color:var(--text-muted); text-decoration:none; font-family:'Oswald',sans-serif; font-size:0.95rem; transition:color 0.2s; }
+    nav a:hover { color:var(--accent); }
+    .container { max-width:1200px; margin:0 auto; padding:0 2rem; }
+    .page-hero { background:var(--bg2); border-bottom:1px solid var(--border); padding:4rem 2rem; }
+    .page-tag { font-family:'Oswald',sans-serif; font-size:0.7rem; letter-spacing:0.15em; color:var(--accent); text-transform:uppercase; margin-bottom:1rem; display:block; }
+    h1 { font-family:'Oswald',sans-serif; font-size:clamp(2rem,5vw,3.5rem); font-weight:700; line-height:1.1; }
+    .page-sub { color:var(--text-muted); margin-top:1rem; max-width:600px; }
+
+    /* LEAD FORM */
+    .lead-form-wrap { background:var(--accent); padding:3rem 2rem; }
+    .lead-form { max-width:700px; margin:0 auto; }
+    .lead-form h2 { font-family:'Oswald',sans-serif; font-size:2rem; color:#000; margin-bottom:0.5rem; }
+    .lead-form p { color:rgba(0,0,0,0.7); margin-bottom:1.5rem; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem; }
+    .form-group { display:flex; flex-direction:column; gap:0.4rem; }
+    label { font-family:'Oswald',sans-serif; font-size:0.8rem; letter-spacing:0.1em; color:rgba(0,0,0,0.7); }
+    input, select, textarea {
+      background:rgba(0,0,0,0.15); border:1px solid rgba(0,0,0,0.2);
+      color:#000; font-family:'PT Serif',serif; font-size:1rem;
+      padding:0.75rem 1rem; width:100%;
+    }
+    input::placeholder { color:rgba(0,0,0,0.4); }
+    textarea { min-height:80px; resize:vertical; }
+    .btn-submit { background:#000; color:var(--accent); font-family:'Oswald',sans-serif; font-weight:700; font-size:1rem; letter-spacing:0.1em; padding:1rem 2rem; border:none; cursor:pointer; width:100%; margin-top:0.5rem; transition:background 0.2s; }
+    .btn-submit:hover { background:#111; }
+
+    /* SERVICES GRID */
+    .services-section { padding:4rem 0; }
+    .section-header { margin-bottom:2rem; }
+    .section-label { font-family:'Oswald',sans-serif; font-size:0.75rem; letter-spacing:0.2em; color:var(--accent); text-transform:uppercase; margin-bottom:0.5rem; }
+    h2 { font-family:'Oswald',sans-serif; font-size:2rem; font-weight:700; }
+
+    .filter-row { display:flex; gap:0.5rem; margin-bottom:2rem; flex-wrap:wrap; }
+    .filter-btn { font-family:'Oswald',sans-serif; font-size:0.8rem; letter-spacing:0.05em; padding:0.5rem 1.2rem; border:1px solid var(--border); background:transparent; color:var(--text-muted); cursor:pointer; transition:all 0.2s; }
+    .filter-btn:hover, .filter-btn.active { border-color:var(--accent); color:var(--accent); }
+
+    .services-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(340px, 1fr)); gap:1px; background:var(--border); border:1px solid var(--border); }
+    .service-card { background:var(--bg2); padding:1.5rem; transition:background 0.2s; }
+    .service-card:hover { background:var(--bg3); }
+    .service-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem; }
+    .service-name { font-family:'Oswald',sans-serif; font-size:1.1rem; font-weight:600; }
+    .service-city { font-family:'Oswald',sans-serif; font-size:0.75rem; background:var(--bg3); color:var(--text-muted); padding:0.2rem 0.6rem; }
+    .service-tags { display:flex; gap:0.4rem; flex-wrap:wrap; margin-bottom:1rem; }
+    .service-tag { font-family:'Oswald',sans-serif; font-size:0.65rem; letter-spacing:0.08em; padding:0.2rem 0.5rem; background:rgba(255,107,0,0.1); color:var(--accent); }
+    .service-desc { font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem; }
+    .service-footer { display:flex; justify-content:space-between; align-items:center; }
+    .service-phone { font-family:'Oswald',sans-serif; color:var(--accent); text-decoration:none; }
+    .service-rating { font-size:0.85rem; color:var(--text-muted); }
+
+    /* ADD SERVICE */
+    .add-service { background:var(--bg2); border:1px solid var(--border); padding:3rem; text-align:center; margin-top:2rem; }
+    .add-service h3 { font-family:'Oswald',sans-serif; font-size:1.5rem; margin-bottom:0.5rem; }
+    .add-service p { color:var(--text-muted); margin-bottom:1.5rem; }
+    .btn-add { background:var(--accent); color:#000; font-family:'Oswald',sans-serif; font-weight:700; padding:0.85rem 2rem; text-decoration:none; display:inline-block; }
+
+    footer { background:var(--bg2); border-top:1px solid var(--border); padding:2rem; text-align:center; color:var(--text-muted); font-size:0.85rem; }
+    footer a { color:var(--accent); text-decoration:none; }
+    @media(max-width:768px) { nav ul{display:none;} .form-row{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="/" class="logo">GBO<span>.pp.ua</span></a>
+  <ul>
+    <li><a href="/articles.html">Статті</a></li>
+    <li><a href="/generations.html">Покоління ГБО</a></li>
+    <li><a href="/services.html" style="color:var(--accent)">Сервіси</a></li>
+    <li><a href="/contacts.html">Контакт</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="page-tag">КАТАЛОГ</span>
+    <h1>Сервіси ГБО<br>по всій Україні</h1>
+    <p class="page-sub">Перевірені майстри та СТО. Залиш заявку — підберемо майстра у твоєму місті безкоштовно.</p>
+  </div>
+</div>
+
+<!-- LEAD FORM -->
+<div class="lead-form-wrap">
+  <div class="lead-form">
+    <h2>Знайти майстра у своєму місті</h2>
+    <p>Заповни форму — ми підберемо 2–3 перевірені сервіси та надішлемо контакти.</p>
+    <div class="form-row">
+      <div class="form-group">
+        <label>ІМʼЯ</label>
+        <input type="text" placeholder="Олег">
+      </div>
+      <div class="form-group">
+        <label>ТЕЛЕФОН</label>
+        <input type="tel" placeholder="+380 XX XXX XX XX">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>МІСТО</label>
+        <input type="text" placeholder="Ваш місто">
+      </div>
+      <div class="form-group">
+        <label>АВТО</label>
+        <input type="text" placeholder="Toyota Camry 2018, 2.5">
+      </div>
+    </div>
+    <div class="form-group" style="margin-bottom:1rem;">
+      <label>ЩО ПОТРІБНО?</label>
+      <select>
+        <option>Нова установка ГБО</option>
+        <option>Технічне обслуговування ГБО</option>
+        <option>Ремонт та діагностика</option>
+        <option>Переатестація балону</option>
+      </select>
+    </div>
+    <button class="btn-submit">Знайти майстра безкоштовно →</button>
+  </div>
+</div>
+
+<!-- CATALOG -->
+<div class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">СЕРВІСИ</div>
+      <h2>Каталог сервісів</h2>
+    </div>
+
+    <div class="filter-row">
+      <button class="filter-btn active">Всі міста</button>
+      <button class="filter-btn">Київ</button>
+      <button class="filter-btn">Харків</button>
+      <button class="filter-btn">Дніпро</button>
+      <button class="filter-btn">Одеса</button>
+      <button class="filter-btn">Запоріжжя</button>
+      <button class="filter-btn">Львів</button>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-top">
+          <div class="service-name">GasPro Service</div>
+          <div class="service-city">📍 Київ</div>
+        </div>
+        <div class="service-tags">
+          <span class="service-tag">4-те покоління</span>
+          <span class="service-tag">5-те покоління</span>
+          <span class="service-tag">BRC</span>
+          <span class="service-tag">LOVATO</span>
+        </div>
+        <div class="service-desc">Офіційний партнер BRC та LOVATO. Досвід 12 років, встановили понад 4 000 систем. Гарантія 2 роки.</div>
+        <div class="service-footer">
+          <a href="tel:+380441234567" class="service-phone">+38 (044) 123-45-67</a>
+          <span class="service-rating">⭐ 4.9 · 214 відгуків</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-top">
+          <div class="service-name">АвтоГаз Харків</div>
+          <div class="service-city">📍 Харків</div>
+        </div>
+        <div class="service-tags">
+          <span class="service-tag">4-те покоління</span>
+          <span class="service-tag">STAG</span>
+          <span class="service-tag">Digitronic</span>
+        </div>
+        <div class="service-desc">Спеціалізуємось на 4-му поколінні для японських та корейських авто. Сертифіковані техніки. Є виїзд.</div>
+        <div class="service-footer">
+          <a href="tel:+380571234567" class="service-phone">+38 (057) 123-45-67</a>
+          <span class="service-rating">⭐ 4.8 · 178 відгуків</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-top">
+          <div class="service-name">GBO Master Дніпро</div>
+          <div class="service-city">📍 Дніпро</div>
+        </div>
+        <div class="service-tags">
+          <span class="service-tag">4-те покоління</span>
+          <span class="service-tag">5-те покоління</span>
+          <span class="service-tag">Переатестація</span>
+        </div>
+        <div class="service-desc">Повний комплекс послуг: від встановлення до переатестації балонів. Оформлення документів.</div>
+        <div class="service-footer">
+          <a href="tel:+380561234567" class="service-phone">+38 (056) 123-45-67</a>
+          <span class="service-rating">⭐ 4.7 · 96 відгуків</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-top">
+          <div class="service-name">Газ на авто Львів</div>
+          <div class="service-city">📍 Львів</div>
+        </div>
+        <div class="service-tags">
+          <span class="service-tag">4-те покоління</span>
+          <span class="service-tag">BRC</span>
+          <span class="service-tag">Landi Renzo</span>
+        </div>
+        <div class="service-desc">Досвід 8 років. Спеціалізуємось на преміальних марках: BMW, Mercedes, Audi. Усне та письмове підтвердження гарантії.</div>
+        <div class="service-footer">
+          <a href="tel:+380321234567" class="service-phone">+38 (032) 123-45-67</a>
+          <span class="service-rating">⭐ 4.9 · 143 відгуків</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-top">
+          <div class="service-name">ЕкоГаз Одеса</div>
+          <div class="service-city">📍 Одеса</div>
+        </div>
+        <div class="service-tags">
+          <span class="service-tag">4-те покоління</span>
+          <span class="service-tag">PRINS</span>
+          <span class="service-tag">ТО ГБО</span>
+        </div>
+        <div class="service-desc">Встановлення та ТО. Є фірмовий магазин запчастин. Можливе безвідсоткове розтермінування 6 місяців.</div>
+        <div class="service-footer">
+          <a href="tel:+380481234567" class="service-phone">+38 (048) 123-45-67</a>
+          <span class="service-rating">⭐ 4.6 · 88 відгуків</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-top">
+          <div class="service-name">GDI Спеціаліст Київ</div>
+          <div class="service-city">📍 Київ</div>
+        </div>
+        <div class="service-tags">
+          <span class="service-tag">5-те покоління</span>
+          <span class="service-tag">PRINS VSI DI</span>
+          <span class="service-tag">GDI/TSI</span>
+        </div>
+        <div class="service-desc">Єдиний у Київській обл. спеціаліст по 5-му поколінню ГБО для GDI/TSI двигунів. Досвід 6 років, 500+ установок.</div>
+        <div class="service-footer">
+          <a href="tel:+380441234568" class="service-phone">+38 (044) 123-45-68</a>
+          <span class="service-rating">⭐ 5.0 · 62 відгуків</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="add-service">
+      <h3>Ти майстер або СТО?</h3>
+      <p>Додай свій сервіс у каталог — це безкоштовно для перших 50 сервісів.</p>
+      <a href="/contacts.html" class="btn-add">Додати свій сервіс →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <a href="/">GBO.pp.ua</a> — Незалежний портал про газобалонне обладнання
+</footer>
+
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
